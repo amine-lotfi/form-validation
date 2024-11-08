@@ -32,7 +32,7 @@
                                         <div class="form-outline">
                                             <label class="form-label" for="firstName">First Name</label>
                                             <input type="text" name="first-name" id="firstName" class="form-control <?php echo !empty($errors['first-name-error']) ? 'is-invalid' : ''; ?>"
-                                                placeholder="Enter your first name" />
+                                                placeholder="Enter your first name" value="<?php echo isset($_POST['first-name']) ? htmlspecialchars($_POST['first-name']) : ''; ?>" />
                                             <div id="validationServerFeedback" class="invalid-feedback"><?php echo $errors['first-name-error']; ?></div>
                                         </div>
 
@@ -42,7 +42,7 @@
                                         <div class="form-outline">
                                             <label class="form-label" for="lastName">Last Name</label>
                                             <input type="text" name="last-name" id="lastName" class="form-control <?php echo !empty($errors['last-name-error']) ? 'is-invalid' : ''; ?>"
-                                                placeholder="Enter your last name" />
+                                                placeholder="Enter your last name" value="<?php echo isset($_POST['last-name']) ? htmlspecialchars($_POST['last-name']) : ''; ?>" />
                                             <div id="validationServerFeedback" class="invalid-feedback"><?php echo $errors['last-name-error']; ?></div>
                                         </div>
 
@@ -55,7 +55,7 @@
                                         <div class="form-outline datepicker w-100">
                                             <label for="birthdayDate" class="form-label">Birthday</label>
                                             <input type="date" name="birth-date" class="form-control <?php echo !empty($errors['birth-date-error']) ? 'is-invalid' : ''; ?>" id="birthdayDate"
-                                                placeholder="Enter your birthdate" />
+                                                placeholder="Enter your birthdate" value="<?php echo isset($_POST['birth-date']) ? htmlspecialchars($_POST['birth-date']) : ''; ?>" />
                                             <div id="validationServerFeedback" class="invalid-feedback"><?php echo $errors['birth-date-error']; ?></div>
                                         </div>
 
@@ -84,7 +84,7 @@
                                         <div class="form-outline">
                                             <label class="form-label" for="emailAddress">Email</label>
                                             <input type="email" name="email" id="emailAddress" class="form-control <?php echo !empty($errors['email-error']) ? 'is-invalid' : ''; ?>"
-                                                placeholder="Enter your email" />
+                                                placeholder="Enter your email" value="<?php echo isset($_POST['email']) ? htmlspecialchars($_POST['email']) : ''; ?>" />
                                             <div id="validationServerFeedback" class="invalid-feedback"><?php echo $errors['email-error']; ?></div>
                                         </div>
 
@@ -94,7 +94,7 @@
                                         <div class="form-outline">
                                             <label class="form-label" for="phoneNumber">Phone Number</label>
                                             <input type="tel" name="phone-number" id="phoneNumber" class="form-control <?php echo !empty($errors['phone-number-error']) ? 'is-invalid' : ''; ?>"
-                                                placeholder="Enter your phone number" />
+                                                placeholder="Enter your phone number" value="<?php echo isset($_POST['phone-number']) ? htmlspecialchars($_POST['phone-number']) : ''; ?>" />
                                             <div id="validationServerFeedback" class="invalid-feedback"><?php echo $errors['phone-number-error']; ?></div>
                                         </div>
 
